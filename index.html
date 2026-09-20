@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Interior & Furniture - Desain Modern & Custom</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#faf7f2',
+                            100: '#f3ece0',
+                            200: '#e5d7c3',
+                            300: '#d3bc9f',
+                            400: '#be9c77',
+                            500: '#ab8256',
+                            600: '#976a44',
+                            700: '#7a5237',
+                            800: '#644331',
+                            900: '#52382b',
+                        },
+                        terracotta: '#c86d51',
+                        warmgray: '#f4f3f0'
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #7a5237 0%, #be9c77 100%);
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-brand-50/40 antialiased selection:bg-brand-200 selection:text-brand-900">
+
+    <!-- Header / Navigasi -->
+    <header class="sticky top-0 z-50 glass-card border-b border-brand-100/80 transition-all duration-300" id="main-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2 group">
+                    <div class="w-10 h-10 rounded-xl bg-brand-700 flex items-center justify-center text-amber-100 shadow-md transition-transform group-hover:scale-105">
+                        <i data-lucide="armchair" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <span class="font-serif text-2xl font-bold tracking-tight text-brand-900 block leading-none">LUMINA</span>
+                        <span class="text-[10px] tracking-widest uppercase text-brand-600 font-semibold">Interior & Living</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Menu -->
+                <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-gray-700">
+                    <a href="#beranda" class="hover:text-brand-700 transition-colors py-1">Beranda</a>
+                    <a href="#layanan" class="hover:text-brand-700 transition-colors py-1">Layanan</a>
+                    <a href="#tentang" class="hover:text-brand-700 transition-colors py-1">Tentang</a>
+                    <a href="#proses" class="hover:text-brand-700 transition-colors py-1">Proses Kerja</a>
+                    <a href="#katalog" class="hover:text-brand-700 transition-colors py-1">Katalog</a>
+                    <a href="#testimoni" class="hover:text-brand-700 transition-colors py-1">Testimoni</a>
+                    <a href="#artikel" class="hover:text-brand-700 transition-colors py-1">Artikel</a>
+                    <a href="#kontak" class="hover:text-brand-700 transition-colors py-1">Kontak</a>
+                </nav>
+
+                <!-- Header CTA & Mobile Button -->
+                <div class="flex items-center gap-3">
+                    <a href="#katalog-management" class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-brand-100 hover:bg-brand-200 text-brand-800 font-semibold text-xs transition-all">
+                        <i data-lucide="plus-circle" class="w-4 h-4"></i>
+                        <span>Kelola Produk</span>
+                    </a>
+                    <a href="#kontak" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-medium text-sm shadow-sm transition-all hover:shadow-md">
+                        Konsultasi
+                    </a>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-xl text-gray-700 hover:bg-brand-100 focus:outline-none" aria-label="Toggle Menu">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white/95 backdrop-blur-md border-b border-brand-100 px-4 pt-2 pb-6 space-y-3">
+            <a href="#beranda" class="block py-2 text-gray-700 font-medium hover:text-brand-700 border-b border-gray-100">Beranda</a>
+            <a href="#layanan" class="block py-2 text-gray-700 font-medium hover:text-brand-700 border-b border-gray-100">Layanan</a>
+            <a href="#tentang" class="block py-2 text-gray-700 font-medium hover:text-brand-700 border-b border-gray-100">Tentang Kami</a>
+            <a href="#proses" class="block py-2 text-gray-700 font-medium hover:text-brand-700 border-b border-gray-100">Proses Kerja</a>
+            <a href="#katalog" class="block py-2 text-gray-700 font-medium hover:text-brand-700 border-b border-gray-100">Katalog Barang</a>
+            <a href="#katalog-management" class="block py-2 text-brand-700 font-semibold border-b border-gray-100">+ Tambah/Hapus Produk</a>
+            <a href="#testimoni" class="block py-2 text-gray-700 font-medium hover:text-brand-700 border-b border-gray-100">Testimoni</a>
+            <a href="#artikel" class="block py-2 text-gray-700 font-medium hover:text-brand-700 border-b border-gray-100">Artikel</a>
+            <a href="#kontak" class="block py-2 text-gray-700 font-medium hover:text-brand-700">Kontak Us</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="relative pt-8 pb-20 md:pt-16 md:pb-28 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-100/80 text-brand-800 text-xs font-semibold tracking-wide uppercase border border-brand-200">
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-terracotta"></i>
+                        <span>Desain Interior Premium & Terpercaya</span>
+                    </div>
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                        Wujudkan Ruangan <br class="hidden sm:inline" />
+                        <span class="text-gradient">Impian yang Hangat</span> & Elegan
+                    </h1>
+                    <p class="text-gray-600 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Kami merancang dan memproduksi furniture kustom berkualitas tinggi dengan sentuhan estetika modern warm-earth tone untuk kenyamanan hunian Anda.
+                    </p>
+                    
+                    <!-- Hero CTAs -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
+                        <a href="#katalog" class="px-7 py-3.5 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-semibold shadow-lg shadow-brand-700/25 hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 group">
+                            <span>Lihat Katalog Produk</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                        <a href="https://wa.me/6281234567890?text=Halo%20Lumina%20Interior,%20saya%20ingin%20konsultasi%20gratis" target="_blank" class="px-7 py-3.5 rounded-xl bg-white hover:bg-brand-50 text-gray-800 font-semibold border border-brand-200 shadow-sm transition-all duration-300 flex items-center justify-center gap-2">
+                            <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i>
+                            <span>Konsultasi Gratis</span>
+                        </a>
+                    </div>
+
+                    <!-- Highlight Stats -->
+                    <div class="grid grid-cols-3 gap-4 pt-8 border-t border-brand-200/60 max-w-md mx-auto lg:mx-0">
+                        <div>
+                            <p class="font-serif text-2xl sm:text-3xl font-bold text-brand-900">850+</p>
+                            <p class="text-xs text-gray-500 font-medium mt-0.5">Proyek Selesai</p>
+                        </div>
+                        <div>
+                            <p class="font-serif text-2xl sm:text-3xl font-bold text-brand-900">99%</p>
+                            <p class="text-xs text-gray-500 font-medium mt-0.5">Kepuasan Klien</p>
+                        </div>
+                        <div>
+                            <p class="font-serif text-2xl sm:text-3xl font-bold text-brand-900">5 Tahun</p>
+                            <p class="text-xs text-gray-500 font-medium mt-0.5">Garansi Kayu</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl relative border-4 border-white">
+                            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1000" alt="Interior Lumina" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                        </div>
+                        
+                        <!-- Floating Badge -->
+                        <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-brand-100 flex items-center gap-4 max-w-xs">
+                            <div class="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center text-brand-700 shrink-0">
+                                <i data-lucide="award" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 font-medium">Penghargaan 2025</p>
+                                <p class="text-sm font-bold text-gray-900">Best Interior Studio</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Layanan (Services) -->
+    <section id="layanan" class="py-20 bg-white border-y border-brand-100/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-terracotta text-sm font-bold tracking-widest uppercase">Layanan Unggulan</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-gray-900 mt-2">Solusi Interior Lengkap untuk Anda</h2>
+                <p class="text-gray-600 mt-3 text-sm sm:text-base">Dari perancangan awal hingga pengerjaan akhir, kami memberikan layanan komprehensif berstandar tinggi.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="p-8 rounded-2xl bg-brand-50/50 border border-brand-100/80 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-100 text-brand-800 flex items-center justify-center mb-6 group-hover:bg-brand-700 group-hover:text-white transition-colors">
+                        <i data-lucide="compass" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-gray-900 mb-3">Desain Interior Custom</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Perancangan tata letak dan estetika ruang disesuaikan penuh dengan gaya hidup dan preferensi Anda.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="p-8 rounded-2xl bg-brand-50/50 border border-brand-100/80 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-100 text-brand-800 flex items-center justify-center mb-6 group-hover:bg-brand-700 group-hover:text-white transition-colors">
+                        <i data-lucide="hammer" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-gray-900 mb-3">Pembuatan Furniture</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Produksi kustom sofa, lemari, kitchen set, meja dengan bahan kayu solid/pilihan terbaik.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="p-8 rounded-2xl bg-brand-50/50 border border-brand-100/80 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-100 text-brand-800 flex items-center justify-center mb-6 group-hover:bg-brand-700 group-hover:text-white transition-colors">
+                        <i data-lucide="home" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-gray-900 mb-3">Renovasi Ruangan</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Mengubah suasana ruang lama menjadi modern, fungsional, dan bernilai estetika tinggi.</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="p-8 rounded-2xl bg-brand-50/50 border border-brand-100/80 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-100 text-brand-800 flex items-center justify-center mb-6 group-hover:bg-brand-700 group-hover:text-white transition-colors">
+                        <i data-lucide="messages-square" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-gray-900 mb-3">Konsultasi Desain</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Sesi diskusi mendalam bersama tim desainer profesional untuk pemilihan material & konsep warna.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Kami (About Us) -->
+    <section id="tentang" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="grid grid-cols-2 gap-4">
+                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=600" alt="Furniture Crafting" class="rounded-2xl shadow-md w-full h-64 object-cover">
+                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=600" alt="Modern Sofa" class="rounded-2xl shadow-md w-full h-64 object-cover mt-8">
+                </div>
+
+                <div class="space-y-6">
+                    <span class="text-terracotta text-sm font-bold tracking-widest uppercase">Tentang Lumina</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-gray-900">Mendedikasikan Keahlian untuk Keindahan Hunian Anda</h2>
+                    <p class="text-gray-600 leading-relaxed text-sm sm:text-base">
+                        Berdiri sejak 2018, Lumina Interior telah melayani ribuan keluarga dan pemilik bisnis dalam menciptakan ruang hidup yang nyaman, estetik, dan bertahan lama. Kami percaya bahwa setiap furniture membawa karakter dan cerita tersendiri.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-1">
+                                <i data-lucide="check" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Material Kualitas Tinggi</h4>
+                                <p class="text-sm text-gray-600">Menggunakan kayu Jati pilihan, mahoni grade A, serta hardware premium tahan karat.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-1">
+                                <i data-lucide="check" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Garansi Hingga 5 Tahun</h4>
+                                <p class="text-sm text-gray-600">Jaminan perbaikan struktur dan kayu untuk memastikan ketenangan pikiran Anda.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-1">
+                                <i data-lucide="check" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Tim Arsitek & Pengrajin Profesional</h4>
+                                <p class="text-sm text-gray-600">Sinergi antara ide arsitektural modern dan ketelitian tangan pengrajin berpengalaman.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proses Kerja (Work Process) -->
+    <section id="proses" class="py-20 bg-brand-900 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-brand-300 text-sm font-bold tracking-widest uppercase">Alur Kerja Kami</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-amber-50 mt-2">4 Langkah Mudah Menuju Ruang Impian</h2>
+                <p class="text-brand-200 mt-3 text-sm sm:text-base">Proses terstruktur yang transparan dan bebas dari rasa khawatir.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="bg-brand-800/60 p-8 rounded-2xl border border-brand-700 relative">
+                    <span class="text-5xl font-serif font-bold text-brand-600/40 absolute top-4 right-6">01</span>
+                    <div class="w-12 h-12 rounded-xl bg-brand-700 text-amber-200 flex items-center justify-center mb-6">
+                        <i data-lucide="ruler" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-amber-100 mb-2">Konsultasi & Ukur</h3>
+                    <p class="text-brand-200 text-sm leading-relaxed">Diskusi ide, anggaran, serta pengukuran presisi ke lokasi Anda.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-brand-800/60 p-8 rounded-2xl border border-brand-700 relative">
+                    <span class="text-5xl font-serif font-bold text-brand-600/40 absolute top-4 right-6">02</span>
+                    <div class="w-12 h-12 rounded-xl bg-brand-700 text-amber-200 flex items-center justify-center mb-6">
+                        <i data-lucide="layout" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-amber-100 mb-2">Desain 3D & Konsep</h3>
+                    <p class="text-brand-200 text-sm leading-relaxed">Visualisasi 3D realistis agar Anda dapat melihat hasil akhir sebelum diproduksi.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-brand-800/60 p-8 rounded-2xl border border-brand-700 relative">
+                    <span class="text-5xl font-serif font-bold text-brand-600/40 absolute top-4 right-6">03</span>
+                    <div class="w-12 h-12 rounded-xl bg-brand-700 text-amber-200 flex items-center justify-center mb-6">
+                        <i data-lucide="cog" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-amber-100 mb-2">Produksi & Finishing</h3>
+                    <p class="text-brand-200 text-sm leading-relaxed">Pengerjaan cermat di workshop kami oleh tim berpengalaman.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-brand-800/60 p-8 rounded-2xl border border-brand-700 relative">
+                    <span class="text-5xl font-serif font-bold text-brand-600/40 absolute top-4 right-6">04</span>
+                    <div class="w-12 h-12 rounded-xl bg-brand-700 text-amber-200 flex items-center justify-center mb-6">
+                        <i data-lucide="truck" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-amber-100 mb-2">Pemasangan & QA</h3>
+                    <p class="text-brand-200 text-sm leading-relaxed">Pengiriman dan instalasi rapi langsung di hunian Anda dengan Quality Check.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Katalog Barang & Management -->
+    <section id="katalog" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div>
+                    <span class="text-terracotta text-sm font-bold tracking-widest uppercase">Koleksi Terpopuler</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-gray-900 mt-1">Katalog Furniture</h2>
+                </div>
+
+                <!-- Filter Kategori -->
+                <div class="flex flex-wrap gap-2" id="category-filters">
+                    <button class="filter-btn active px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-brand-700 text-white transition-all" data-category="Semua">Semua</button>
+                    <button class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white text-gray-700 hover:bg-brand-100 transition-all border border-brand-200" data-category="Ruang Tamu">Ruang Tamu</button>
+                    <button class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white text-gray-700 hover:bg-brand-100 transition-all border border-brand-200" data-category="Kamar Tidur">Kamar Tidur</button>
+                    <button class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white text-gray-700 hover:bg-brand-100 transition-all border border-brand-200" data-category="Dapur / Kitchen Set">Dapur</button>
+                    <button class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white text-gray-700 hover:bg-brand-100 transition-all border border-brand-200" data-category="Kantor">Kantor</button>
+                </div>
+            </div>
+
+            <!-- Grid Katalog Produk -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="product-grid">
+                <!-- Data produk dikendalikan via JavaScript -->
+            </div>
+            
+            <div id="no-products" class="hidden text-center py-12">
+                <i data-lucide="package-open" class="w-16 h-16 text-brand-300 mx-auto mb-4"></i>
+                <p class="text-gray-500 font-medium">Tidak ada produk dalam kategori ini.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Manajemen Input Barang Baru -->
+    <section id="katalog-management" class="py-16 bg-brand-100/60 border-y border-brand-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-lg border border-brand-200/80">
+                <div class="flex items-center gap-3 mb-6 pb-4 border-b border-gray-100">
+                    <div class="w-10 h-10 rounded-xl bg-brand-700 text-white flex items-center justify-center">
+                        <i data-lucide="plus" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-2xl font-bold text-gray-900">Tambah Barang Baru</h3>
+                        <p class="text-xs sm:text-sm text-gray-500">Tambahkan barang baru ke dalam sistem katalog (tersimpan di browser local storage)</p>
+                    </div>
+                </div>
+
+                <form id="add-product-form" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2">Nama Barang *</label>
+                            <input type="text" id="prod-name" required placeholder="Contoh: Sofa Minimalis Velvet" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-600 text-sm">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2">Kategori *</label>
+                            <select id="prod-category" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-600 text-sm bg-white">
+                                <option value="Ruang Tamu">Ruang Tamu</option>
+                                <option value="Kamar Tidur">Kamar Tidur</option>
+                                <option value="Dapur / Kitchen Set">Dapur / Kitchen Set</option>
+                                <option value="Kantor">Kantor</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2">Harga (Rp) *</label>
+                            <input type="number" id="prod-price" required placeholder="Contoh: 3500000" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-600 text-sm">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2">URL Gambar Produk *</label>
+                            <input type="url" id="prod-image" required placeholder="https://images.unsplash.com/..." class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-600 text-sm">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2">Deskripsi Produk *</label>
+                        <textarea id="prod-desc" rows="3" required placeholder="Tuliskan spesifikasi ringkas, bahan, dan dimensi..." class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-600 text-sm"></textarea>
+                    </div>
+
+                    <div class="flex justify-end gap-4 pt-2">
+                        <button type="reset" class="px-6 py-3 rounded-xl border border-gray-300 text-gray-700 font-semibold text-sm hover:bg-gray-50 transition-all">Reset</button>
+                        <button type="submit" class="px-8 py-3 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-semibold text-sm shadow-md transition-all flex items-center gap-2">
+                            <i data-lucide="save" class="w-4 h-4"></i>
+                            <span>Simpan ke Katalog</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimoni Pelanggan -->
+    <section id="testimoni" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-terracotta text-sm font-bold tracking-widest uppercase">Ulasan Klien</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-gray-900 mt-2">Apa Kata Mereka Tentang Lumina?</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testi 1 -->
+                <div class="bg-brand-50/40 p-8 rounded-2xl border border-brand-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-500 gap-1 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-gray-700 italic text-sm leading-relaxed mb-6">"Kitchen set kustom buatan Lumina luar biasa rapi. Pemilihan bahan HPL kayu warm-tone persis seperti 3D rendering yang diajukan!"</p>
+                    </div>
+                    <div class="flex items-center gap-4 pt-4 border-t border-brand-200/50">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150" alt="Siti Rahma" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm">Siti Rahmawati</h4>
+                            <p class="text-xs text-gray-500">Pemilik Rumah di BSD City</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testi 2 -->
+                <div class="bg-brand-50/40 p-8 rounded-2xl border border-brand-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-500 gap-1 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-gray-700 italic text-sm leading-relaxed mb-6">"Sangat profesional. Pengukuran presisi, pengerjaan tepat waktu, dan staf pemasangan sangat sopan serta menjaga kebersihan rumah."</p>
+                    </div>
+                    <div class="flex items-center gap-4 pt-4 border-t border-brand-200/50">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150" alt="Budi Santoso" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm">Budi Santoso</h4>
+                            <p class="text-xs text-gray-500">Klien Renovasi Cafe</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testi 3 -->
+                <div class="bg-brand-50/40 p-8 rounded-2xl border border-brand-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-500 gap-1 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-gray-700 italic text-sm leading-relaxed mb-6">"Meja makan kustom dari kayu jati solid hasilnya kokoh sekali. Warnanya sangat natural sesuai permintaan. Worth every penny!"</p>
+                    </div>
+                    <div class="flex items-center gap-4 pt-4 border-t border-brand-200/50">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=150" alt="Diana" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm">Diana Wijaya</h4>
+                            <p class="text-xs text-gray-500">Apartemen Mint Resident</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artikel / Blog -->
+    <section id="artikel" class="py-20 border-t border-brand-100/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-terracotta text-sm font-bold tracking-widest uppercase">Edukasi & Inspirasi</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-gray-900 mt-2">Artikel & Tips Interior</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Article 1 -->
+                <article class="bg-white rounded-2xl overflow-hidden shadow-sm border border-brand-100 hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&q=80&w=600" alt="Tips Warna Warm Tone" class="h-48 w-full object-cover">
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold text-brand-700 bg-brand-100 px-3 py-1 rounded-full inline-block mb-3">Tren Desain</span>
+                            <h3 class="font-serif text-lg font-bold text-gray-900 mb-2 hover:text-brand-700 transition-colors cursor-pointer">Cara Memadukan Warna Earth Tone di Ruang Tamu Kecil</h3>
+                            <p class="text-gray-600 text-xs leading-relaxed line-clamp-3">Temukan kombinasi warna krem, terracotta, dan aksen kayu agar ruangan kecil terasa lebih hangat dan luas...</p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+                            <span>15 Sep 2026</span>
+                            <a href="#" class="font-semibold text-brand-700 hover:underline">Baca Selengkapnya</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="bg-white rounded-2xl overflow-hidden shadow-sm border border-brand-100 hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1540518614846-7ede433c5172?auto=format&fit=crop&q=80&w=600" alt="Perawatan Kayu Jati" class="h-48 w-full object-cover">
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold text-brand-700 bg-brand-100 px-3 py-1 rounded-full inline-block mb-3">Perawatan</span>
+                            <h3 class="font-serif text-lg font-bold text-gray-900 mb-2 hover:text-brand-700 transition-colors cursor-pointer">Panduan Perawatan Furniture Kayu Solid Agar Tetap Mengkilap</h3>
+                            <p class="text-gray-600 text-xs leading-relaxed line-clamp-3">Langkah sederhana menggunakan bahan alami untuk merawat permukaan kayu agar terhindar dari jamur dan goresan...</p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+                            <span>10 Sep 2026</span>
+                            <a href="#" class="font-semibold text-brand-700 hover:underline">Baca Selengkapnya</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="bg-white rounded-2xl overflow-hidden shadow-sm border border-brand-100 hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=600" alt="Kitchen Set Minimalis" class="h-48 w-full object-cover">
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold text-brand-700 bg-brand-100 px-3 py-1 rounded-full inline-block mb-3">Kitchen Set</span>
+                            <h3 class="font-serif text-lg font-bold text-gray-900 mb-2 hover:text-brand-700 transition-colors cursor-pointer">5 Desain Kitchen Set Ergonomis untuk Dapur Modern</h3>
+                            <p class="text-gray-600 text-xs leading-relaxed line-clamp-3">Memaksimalkan segitiga kerja (work triangle) pada dapur agar proses memasak makin efisien dan menyenangkan...</p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+                            <span>02 Sep 2026</span>
+                            <a href="#" class="font-semibold text-brand-700 hover:underline">Baca Selengkapnya</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak (Contact) -->
+    <section id="kontak" class="py-20 bg-brand-50/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Info -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <span class="text-terracotta text-sm font-bold tracking-widest uppercase">Hubungi Kami</span>
+                        <h2 class="font-serif text-3xl font-bold text-gray-900 mt-2">Mari Bicara tentang Proyek Anda</h2>
+                        <p class="text-gray-600 text-sm mt-3">Kunjungi showroom kami atau diskusikan kebutuhan kustom interior Anda langsung bersama desainer kami.</p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-brand-200 text-brand-800 flex items-center justify-center shrink-0">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm">Alamat Showroom</h4>
+                                <p class="text-xs text-gray-600 mt-0.5">Jl. Interior Nusantara No. 88, BSD City, Tangerang Selatan</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-brand-200 text-brand-800 flex items-center justify-center shrink-0">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm">WhatsApp / Telepon</h4>
+                                <p class="text-xs text-gray-600 mt-0.5">+62 812-3456-7890</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-brand-200 text-brand-800 flex items-center justify-center shrink-0">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm">Email</h4>
+                                <p class="text-xs text-gray-600 mt-0.5">halo@lumina-interior.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-brand-200 text-brand-800 flex items-center justify-center shrink-0">
+                                <i data-lucide="clock" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm">Jam Operasional</h4>
+                                <p class="text-xs text-gray-600 mt-0.5">Senin - Sabtu: 09:00 - 18:00 WIB</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Mockup -->
+                    <div class="rounded-2xl overflow-hidden border border-brand-200 shadow-sm h-48 bg-gray-200 relative">
+                        <iframe class="w-full h-full border-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126906.77973059434!2d106.60228394462136!3d-6.285223637171493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fb7138332155%3A0xb696f02863773bc2!2sBSD%20City!5e0!3m2!1sid!2sid!4v1700000000000" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:col-span-7">
+                    <div class="bg-white p-8 sm:p-10 rounded-3xl shadow-lg border border-brand-100">
+                        <h3 class="font-serif text-2xl font-bold text-gray-900 mb-2">Kirim Pesan / Kirim Request Desain</h3>
+                        <p class="text-xs text-gray-500 mb-8">Isi formulir di bawah ini dan konsultan kami akan menghubungi Anda dalam kurun waktu 1x24 jam.</p>
+
+                        <form id="contact-form" class="space-y-5">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2">Nama Lengkap *</label>
+                                    <input type="text" required placeholder="Nama Anda" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-600 text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2">Nomor Telepon / WA *</label>
+                                    <input type="tel" required placeholder="0812xxxxxxx" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-600 text-sm">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2">Layanan yang Diminati</label>
+                                <select class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-600 text-sm bg-white">
+                                    <option>Desain Interior Custom</option>
+                                    <option>Pembuatan Furniture Kustom</option>
+                                    <option>Renovasi Ruangan</option>
+                                    <option>Konsultasi Desain</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2">Pesan atau Kebutuhan Ruangan</label>
+                                <textarea rows="4" placeholder="Ceritakan ukuran ruangan atau konsep interior yang Anda inginkan..." class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-600 text-sm"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-3.5 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-semibold text-sm shadow-md transition-all flex items-center justify-center gap-2">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                                <span>Kirim Pesan Konsultasi</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-900 text-brand-100 pt-16 pb-12 border-t border-brand-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-brand-800">
+                <!-- Col 1 -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-lg bg-brand-700 flex items-center justify-center text-amber-100">
+                            <i data-lucide="armchair" class="w-5 h-5"></i>
+                        </div>
+                        <span class="font-serif text-xl font-bold tracking-tight text-white">LUMINA</span>
+                    </div>
+                    <p class="text-xs text-brand-300 leading-relaxed">
+                        Studio desain interior & pembuatan furniture kustom berkualitas tinggi dengan gaya modern minimalis dan nuansa hangat.
+                    </p>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="font-serif text-sm font-bold text-white uppercase tracking-wider mb-4">Navigasi</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#beranda" class="hover:text-amber-200 transition-colors">Beranda</a></li>
+                        <li><a href="#layanan" class="hover:text-amber-200 transition-colors">Layanan Us</a></li>
+                        <li><a href="#tentang" class="hover:text-amber-200 transition-colors">Tentang Kami</a></li>
+                        <li><a href="#proses" class="hover:text-amber-200 transition-colors">Proses Kerja</a></li>
+                        <li><a href="#katalog" class="hover:text-amber-200 transition-colors">Katalog Barang</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="font-serif text-sm font-bold text-white uppercase tracking-wider mb-4">Kategori Utama</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#katalog" class="hover:text-amber-200 transition-colors">Sofa & Ruang Tamu</a></li>
+                        <li><a href="#katalog" class="hover:text-amber-200 transition-colors">Tempat Tidur & Lemari</a></li>
+                        <li><a href="#katalog" class="hover:text-amber-200 transition-colors">Kitchen Set & Meja Makan</a></li>
+                        <li><a href="#katalog" class="hover:text-amber-200 transition-colors">Set Meja Kerja Kantor</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h4 class="font-serif text-sm font-bold text-white uppercase tracking-wider mb-4">Ikuti Kami</h4>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-9 h-9 rounded-xl bg-brand-800 flex items-center justify-center hover:bg-brand-700 text-amber-200 transition-colors">
+                            <i data-lucide="instagram" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-xl bg-brand-800 flex items-center justify-center hover:bg-brand-700 text-amber-200 transition-colors">
+                            <i data-lucide="facebook" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-xl bg-brand-800 flex items-center justify-center hover:bg-brand-700 text-amber-200 transition-colors">
+                            <i data-lucide="youtube" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 text-center text-xs text-brand-400">
+                <p>&copy; 2026 Lumina Interior & Furniture. Seluruh Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript Logic -->
+    <script>
+        // Initial Default Data Produk
+        const initialProducts = [
+            {
+                id: 'prod-1',
+                name: 'Sofa Modular Nordic Warm Grey',
+                category: 'Ruang Tamu',
+                price: 5200000,
+                image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=800',
+                description: 'Sofa 3 seater dengan busa empuk kualitas tinggi dan kain linen hangat.'
+            },
+            {
+                id: 'prod-2',
+                name: 'Meja Makan Kayu Jati Minimalis',
+                category: 'Dapur / Kitchen Set',
+                price: 6800000,
+                image: 'https://images.unsplash.com/photo-1615066390971-03e4e1c36ddf?auto=format&fit=crop&q=80&w=800',
+                description: 'Meja makan kapasitas 6 orang dibuat dari bahan kayu Jati solid pilihan.'
+            },
+            {
+                id: 'prod-3',
+                name: 'Tempat Tidur Modern Oak Headboard',
+                category: 'Kamar Tidur',
+                price: 7500000,
+                image: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&q=80&w=800',
+                description: 'Dipan ukuran King 180x200cm dengan sandaran headboard berbahan kayu oak.'
+            },
+            {
+                id: 'prod-4',
+                name: 'Meja Kerja Ergonomis & Rak Buku',
+                category: 'Kantor',
+                price: 3400000,
+                image: 'https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?auto=format&fit=crop&q=80&w=800',
+                description: 'Meja kerja minimalis dengan kabel tray tersembunyi dan rak buku samping.'
+            },
+            {
+                id: 'prod-5',
+                name: 'Credenza & Kabinet TV Walnut',
+                category: 'Ruang Tamu',
+                price: 4100000,
+                image: 'https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&q=80&w=800',
+                description: 'Kabinet TV berdesain retro-modern dengan pintu geser kayu.'
+            },
+            {
+                id: 'prod-6',
+                name: 'Set Island Kitchen & Barstool',
+                category: 'Dapur / Kitchen Set',
+                price: 12500000,
+                image: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=800',
+                description: 'Kitchen island marmer sintetis lengkap dengan 2 kursi barstool kayu.'
+            }
+        ];
+
+        // State & LocalStorage Control
+        let products = [];
+        let currentFilter = 'Semua';
+
+        // Helper untuk Format Mata Uang IDR
+        function formatRupiah(number) {
+            return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(number);
+        }
+
+        // Ambil Data Produk dari LocalStorage
+        function loadProducts() {
+            const savedProducts = localStorage.getItem('lumina_products');
+            if (savedProducts) {
+                products = JSON.parse(savedProducts);
+            } else {
+                products = [...initialProducts];
+                saveProducts();
+            }
+            renderProducts();
+        }
+
+        // Simpan Data Produk ke LocalStorage
+        function saveProducts() {
+            localStorage.setItem('lumina_products', JSON.stringify(products));
+        }
+
+        // Render Grid Produk
+        function renderProducts() {
+            const grid = document.getElementById('product-grid');
+            const noProd = document.getElementById('no-products');
+            grid.innerHTML = '';
+
+            const filteredProducts = currentFilter === 'Semua' 
+                ? products 
+                : products.filter(p => p.category === currentFilter);
+
+            if (filteredProducts.length === 0) {
+                noProd.classList.remove('hidden');
+            } else {
+                noProd.classList.add('hidden');
+            }
+
+            filteredProducts.forEach(prod => {
+                const card = document.createElement('div');
+                card.className = 'bg-white rounded-2xl overflow-hidden border border-brand-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group';
+                card.innerHTML = `
+                    <div class="relative h-60 overflow-hidden bg-gray-100">
+                        <img src="${prod.image}" alt="${prod.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/e5d7c3/52382b?text=Gambar+Furniture'">
+                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-semibold text-brand-800">
+                            ${prod.category}
+                        </span>
+                        <button onclick="deleteProduct('${prod.id}')" class="absolute top-3 right-3 bg-red-500/90 hover:bg-red-600 text-white p-2 rounded-xl text-xs font-medium shadow-md transition-all flex items-center gap-1" title="Hapus Produk">
+                            <i data-lucide="trash-2" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-serif text-lg font-bold text-gray-900 mb-1">${prod.name}</h3>
+                            <p class="text-xs text-gray-500 line-clamp-2 leading-relaxed mb-4">${prod.description}</p>
+                        </div>
+                        <div class="pt-4 border-t border-brand-100 flex items-center justify-between">
+                            <div>
+                                <span class="text-[10px] text-gray-400 block uppercase font-bold">Harga Est.</span>
+                                <span class="font-serif font-bold text-brand-800 text-lg">${formatRupiah(prod.price)}</span>
+                            </div>
+                            <a href="https://wa.me/6281234567890?text=Halo%20Lumina,%20saya%20tertarik%20dengan%20produk%20${encodeURIComponent(prod.name)}" target="_blank" class="px-4 py-2 rounded-xl bg-brand-100 hover:bg-brand-700 hover:text-white text-brand-800 text-xs font-bold transition-colors flex items-center gap-1">
+                                <span>Tanya Detail</span>
+                            </a>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+
+            // Re-initialize Lucide Icons untuk elemen baru
+            lucide.createIcons();
+        }
+
+        // Tambah Produk Baru
+        document.getElementById('add-product-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('prod-name').value;
+            const category = document.getElementById('prod-category').value;
+            const price = parseFloat(document.getElementById('prod-price').value);
+            const image = document.getElementById('prod-image').value;
+            const description = document.getElementById('prod-desc').value;
+
+            const newProd = {
+                id: 'prod-' + Date.now(),
+                name,
+                category,
+                price,
+                image,
+                description
+            };
+
+            products.unshift(newProd);
+            saveProducts();
+            renderProducts();
+
+            // Reset form
+            this.reset();
+
+            // Alert Toast Notification sederhana
+            showNotification('Produk berhasil ditambahkan ke katalog!');
+        });
+
+        // Hapus Produk
+        function deleteProduct(id) {
+            if (confirm('Apakah Anda yakin ingin menghapus produk ini dari katalog?')) {
+                products = products.filter(p => p.id !== id);
+                saveProducts();
+                renderProducts();
+                showNotification('Produk berhasil dihapus!');
+            }
+        }
+
+        // Notification Custom
+        function showNotification(msg) {
+            const toast = document.createElement('div');
+            toast.className = 'fixed bottom-5 right-5 bg-brand-900 text-white px-5 py-3 rounded-2xl shadow-2xl text-xs font-medium z-50 flex items-center gap-2 border border-brand-700 transition-all transform translate-y-0';
+            toast.innerHTML = `<i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i> <span>${msg}</span>`;
+            document.body.appendChild(toast);
+            lucide.createIcons();
+
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
+        }
+
+        // Event Listener Filter Kategori
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => {
+                    b.classList.remove('bg-brand-700', 'text-white');
+                    b.classList.add('bg-white', 'text-gray-700');
+                });
+                this.classList.remove('bg-white', 'text-gray-700');
+                this.classList.add('bg-brand-700', 'text-white');
+
+                currentFilter = this.getAttribute('data-category');
+                renderProducts();
+            });
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Form Kontak Submit
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            showNotification('Pesan Anda telah dikirim! Tim kami akan merespons segera.');
+            this.reset();
+        });
+
+        // Inisialisasi saat window dimuat
+        window.onload = function() {
+            lucide.createIcons();
+            loadProducts();
+        };
+    </script>
+</body>
+</html>
